@@ -38,8 +38,7 @@ Object.defineProperty(Product.prototype, 'daystoExpire', {
 // Add method getDetails to Product here
 
 Product.prototype.getDetails = function () {
-    return `Product Name: ${this.name} , 
-Product Price: ${this.price}`;
+    return `Product Name: ${this.name} , Product Price: ${this.price}`;
 }
 
 // Define the MagicProduct class here
@@ -81,6 +80,8 @@ const loadProducts = (map, prodId) => {
     try {
         // Call Object.keys() to load the property names of the Product object in to prodKeys array here
         let prodKeys = [];
+        let prodKeys = Object.keys(Product);
+        
 
         let iterator_obj = map.entries();
 
